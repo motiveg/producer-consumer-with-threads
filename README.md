@@ -1,6 +1,8 @@
 # producer-consumer-with-threads
 
-# Problem assigned by Instructor John Baldwin for Operating System Principles (CSC 415)
+* Last update to program: April 15, 2018
+
+# Problem assigned by Instructor John Baldwin for Operating System Principles (CSC 415), Spring 2018
 Implement a multi-threaded producer-consumer program using a bounded buffer. Use two condition variables to coordinate access to the buffer in conjunction with a mutex. The first condition variable (ready_to_read) should be used by consumers to wait for data if the buffer is empty. The second condition variable (ready_to_write) should be used by producers to wait for an available slot if the buffer is full. The buffer should have 16 slots total and should be managed as a ring buffer. You will need to use separate variables to track the read index (the next item available to read) and the write index (the next available slot for writing).
 
 The number of producers, the number of consumers, and the number of items each producer produces should be specified by their binary log as command-line parameters. Thus, the following command should generate 8 producers, 16 consumers, and 64 items produced by each producer:
